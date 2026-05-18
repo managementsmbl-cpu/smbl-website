@@ -1,98 +1,48 @@
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+// SMBL.media · Site JS · Mai 2026
+
+// Mobile Navigation Toggle
+const nav = document.querySelector('.nav');
+const toggle = document.querySelector('.nav__toggle');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('is-open');
+    const expanded = nav.classList.contains('is-open');
+    toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  });
+}
+
+// Mark active nav link based on current path
+const path = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav__links a').forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === path || (path === '' && href === 'index.html')) {
+    link.classList.add('active');
+  }
 });
 
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    navToggle.classList.toggle('active');
-});
-
-// Close mobile nav on link click
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.classList.remove('active');
-    });
-});
-
-// Impressum Modal
-const impressumModal = document.getElementById('impressumModal');
-const modalClose = document.getElementById('modalClose');
-
-document.querySelectorAll('[href="#impressum"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        impressumModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-});
-
-modalClose.addEventListener('click', () => {
-    impressumModal.classList.remove('active');
-    document.body.style.overflow = '';
-});
-
-impressumModal.addEventListener('click', (e) => {
-    if (e.target === impressumModal) {
-        impressumModal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-});
-
-// Smooth reveal animations via CSS classes
+// Scroll-triggered fade-ins
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.05 });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.service-card, .work-card, .testimonial-card, .about-content, .about-image, .contact-info, .contact-form-wrapper').forEach((el, i) => {
-    el.classList.add('reveal');
-    el.style.transitionDelay = `${(i % 3) * 0.1}s`;
-    observer.observe(el);
-});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Contact form (placeholder)
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+// Form: simple mailto handoff so the static site can send leads
+document.querySelectorAll('form[data-form="lead"]').forEach(form => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Vielen Dank für deine Nachricht! Wir melden uns in Kürze bei dir.');
-    e.target.reset();
+    const data = new FormData(form);
+    const subject = encodeURIComponent(`Anfrage über smbl.media · ${data.get('name') || 'Lead'}`);
+    const lines = [];
+    for (const [k, v] of data.entries()) {
+      if (v) lines.push(`${k}: ${v}`);
+    }
+    const body = encodeURIComponent(lines.join('\n'));
+    window.location.href = `mailto:management.smbl@gmail.com?subject=${subject}&body=${body}`;
+  });
 });
-
-// Counter animation for stats
-const statNumbers = document.querySelectorAll('.stat-number');
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const el = entry.target;
-            const text = el.textContent;
-            const match = text.match(/(\d+)/);
-            if (match) {
-                const target = parseInt(match[1]);
-                const suffix = text.replace(match[1], '');
-                let current = 0;
-                const step = Math.max(1, Math.floor(target / 40));
-                const interval = setInterval(() => {
-                    current += step;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(interval);
-                    }
-                    el.textContent = current + suffix;
-                }, 30);
-            }
-            statsObserver.unobserve(el);
-        }
-    });
-}, { threshold: 0.5 });
-
-statNumbers.forEach(el => statsObserver.observe(el));

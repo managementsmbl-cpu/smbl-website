@@ -1,480 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMBL – Deine Social Media Agentur</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <script>
-    // Load fonts asynchronously to avoid render blocking
-    setTimeout(function() {
-        var fa = document.createElement('link');
-        fa.rel = 'stylesheet';
-        fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-        document.head.appendChild(fa);
-        var gf = document.createElement('link');
-        gf.rel = 'stylesheet';
-        gf.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
-        document.head.appendChild(gf);
-    }, 100);
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMBL.media · Reels, die Kunden bringen</title>
+  <meta name="description" content="Wir machen Reels, die nicht nur viral gehen — sondern auch Kunden bringen. Reels-Skill + Performance-DNA in einem Team. Berlin · Remote." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="brand-tokens.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="images/logo.png" alt="SMBL Logo" class="logo-img">
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Leistungen</a></li>
-                <li><a href="#work">Projekte</a></li>
-                <li><a href="#about">Über Uns</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#contact" class="btn btn-primary nav-cta">Kostenloses Angebot</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="hero-badge">Social Media Agentur</div>
-            <h1>Wir bringen deine <span class="text-gradient">Marke</span> auf das nächste Level.</h1>
-            <p class="hero-subtitle">Kreative Strategien, starke Inhalte und messbare Ergebnisse – alles aus einer Hand. SMBL ist dein Partner für Social Media, Webdesign und digitales Marketing.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary btn-lg">Jetzt Angebot anfordern</a>
-                <a href="#services" class="btn btn-outline btn-lg">Unsere Leistungen</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Zufriedene Kunden</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">200+</span>
-                    <span class="stat-label">Projekte</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">5M+</span>
-                    <span class="stat-label">Erreichte Nutzer</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Leistungen</span>
-                <h2>Was wir für dich tun können</h2>
-                <p>Von der Strategie bis zur Umsetzung – wir bieten dir alles, was du für deinen digitalen Erfolg brauchst.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Social Media Management</h3>
-                    <p>Wir übernehmen deine Social-Media-Kanäle komplett – von der Content-Erstellung über Community Management bis hin zur Analyse und Optimierung.</p>
-                    <ul class="service-features">
-                        <li>Content-Planung & Erstellung</li>
-                        <li>Community Management</li>
-                        <li>Monatliche Reportings</li>
-                    </ul>
-                </div>
-                <div class="service-card featured">
-                    <div class="service-badge">Beliebt</div>
-                    <div class="service-icon">
-                        <i class="fas fa-ad"></i>
-                    </div>
-                    <h3>Performance Marketing</h3>
-                    <p>Gezielte Werbekampagnen auf Meta, TikTok und Google – für maximale Reichweite und messbare Ergebnisse bei optimalem Budget.</p>
-                    <ul class="service-features">
-                        <li>Meta & TikTok Ads</li>
-                        <li>Google Ads</li>
-                        <li>Retargeting-Strategien</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Webdesign & Entwicklung</h3>
-                    <p>Moderne, mobilfreundliche Websites, die beeindrucken, Besucher fesseln und in Kunden verwandeln – individuell für dein Business.</p>
-                    <ul class="service-features">
-                        <li>Responsive Design</li>
-                        <li>SEO-Optimierung</li>
-                        <li>Schnelle Ladezeiten</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Branding & Logo Design</h3>
-                    <p>Gib deinem Unternehmen ein professionelles Erscheinungsbild mit einem einzigartigen Logo und einer durchdachten Markenidentität.</p>
-                    <ul class="service-features">
-                        <li>Logo-Entwicklung</li>
-                        <li>Corporate Design</li>
-                        <li>Brand Guidelines</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3>Content Creation</h3>
-                    <p>Professionelle Fotos, Videos und Grafiken, die deine Marke authentisch in Szene setzen und deine Zielgruppe begeistern.</p>
-                    <ul class="service-features">
-                        <li>Foto & Video Produktion</li>
-                        <li>Grafikdesign</li>
-                        <li>Reels & TikToks</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>SEO & Analytics</h3>
-                    <p>Werde bei Google gefunden und verstehe deine Daten. Wir optimieren deine Online-Präsenz für langfristigen, organischen Erfolg.</p>
-                    <ul class="service-features">
-                        <li>Keyword-Recherche</li>
-                        <li>OnPage-Optimierung</li>
-                        <li>Conversion Tracking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <span class="section-tag">Über Uns</span>
-                    <h2>Dein digitaler Partner für nachhaltiges Wachstum</h2>
-                    <p>SMBL ist eine Full-Service Social Media Agentur, die Unternehmen dabei hilft, ihre digitale Präsenz auszubauen und echte Ergebnisse zu erzielen. Wir kombinieren kreative Strategien mit datengetriebenem Marketing.</p>
-                    <p>Unser Team aus kreativen Köpfen und Marketing-Experten arbeitet eng mit dir zusammen, um maßgeschneiderte Lösungen zu entwickeln, die wirklich funktionieren.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Persönliche Betreuung</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Transparente Kommunikation</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Messbare Ergebnisse</span>
-                        </div>
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Kreative Lösungen</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="images/team.jpg" alt="SMBL Team" class="about-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work / Portfolio Section -->
-    <section class="work" id="work">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Projekte</span>
-                <h2>Unsere aktuellen Arbeiten</h2>
-                <p>Ein Auszug unserer Projekte – von Webdesign über Social Media Kampagnen bis hin zu Branding.</p>
-            </div>
-            <div class="work-grid">
-                <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/portfolio1.jpg" alt="Restaurant Website" class="work-img">
-                        <div class="work-overlay">
-                            <span class="work-category">Webdesign</span>
-                            <h3>The Blackwood</h3>
-                            <p>Website Design & Entwicklung</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/portfolio2.jpg" alt="Social Media Kampagne" class="work-img">
-                        <div class="work-overlay">
-                            <span class="work-category">Social Media</span>
-                            <h3>Velvet & Vine</h3>
-                            <p>Social Media Kampagne</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/portfolio3.jpg" alt="Branding Projekt" class="work-img">
-                        <div class="work-overlay">
-                            <span class="work-category">Branding</span>
-                            <h3>Aura Creative</h3>
-                            <p>Logo & Corporate Design</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/portfolio4.jpg" alt="E-Commerce Website" class="work-img">
-                        <div class="work-overlay">
-                            <span class="work-category">Webdesign</span>
-                            <h3>Modehouse</h3>
-                            <p>E-Commerce & Entwicklung</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/portfolio5.jpg" alt="Content Creation" class="work-img">
-                        <div class="work-overlay">
-                            <span class="work-category">Content</span>
-                            <h3>Savory Kitchen</h3>
-                            <p>Content Creation & Fotografie</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/portfolio6.jpg" alt="Performance Marketing" class="work-img">
-                        <div class="work-overlay">
-                            <span class="work-category">Marketing</span>
-                            <h3>Growth Analytics</h3>
-                            <p>Performance Marketing</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Kundenstimmen</span>
-                <h2>Was unsere Kunden sagen</h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p>"Platzhalter-Bewertung: Hier steht eine positive Kundenbewertung über die Zusammenarbeit mit SMBL und die erzielten Ergebnisse."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><i class="fas fa-user"></i></div>
-                        <div>
-                            <strong>Max Mustermann</strong>
-                            <span>Geschäftsführer, Beispiel GmbH</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p>"Platzhalter-Bewertung: Hier steht eine weitere Kundenbewertung über den exzellenten Service und die kreative Arbeit des Teams."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><i class="fas fa-user"></i></div>
-                        <div>
-                            <strong>Lisa Beispiel</strong>
-                            <span>Marketing-Leiterin, Muster AG</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p>"Platzhalter-Bewertung: Hier steht eine Kundenbewertung über das professionelle Webdesign und die herausragende Betreuung."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><i class="fas fa-user"></i></div>
-                        <div>
-                            <strong>Thomas Platzhalter</strong>
-                            <span>Inhaber, Demo Restaurant</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Bereit durchzustarten?</h2>
-                <p>Lass uns gemeinsam deine digitale Präsenz auf das nächste Level bringen. Kostenloses Erstgespräch – unverbindlich und persönlich.</p>
-                <a href="#contact" class="btn btn-primary btn-lg">Kostenloses Erstgespräch buchen</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-tag">Kontakt</span>
-                    <h2>Schreib uns</h2>
-                    <p>Hast du Fragen oder möchtest ein unverbindliches Angebot? Wir freuen uns auf deine Nachricht!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>E-Mail</strong>
-                                <span>management.smbl@gmail.com</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" placeholder="Dein Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-Mail *</label>
-                                <input type="email" id="email" name="email" placeholder="deine@email.de" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefon</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+49 123 456 7890">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Gewünschte Leistung</label>
-                            <select id="service" name="service">
-                                <option value="">Bitte wählen...</option>
-                                <option value="social-media">Social Media Management</option>
-                                <option value="performance">Performance Marketing</option>
-                                <option value="webdesign">Webdesign & Entwicklung</option>
-                                <option value="branding">Branding & Logo Design</option>
-                                <option value="content">Content Creation</option>
-                                <option value="seo">SEO & Analytics</option>
-                                <option value="other">Sonstiges</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Nachricht *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Erzähl uns von deinem Projekt..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-full">Nachricht senden</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="images/logo.png" alt="SMBL Logo" class="footer-logo">
-                    <p>Deine Social Media Agentur für kreative Strategien und messbaren digitalen Erfolg.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Leistungen</h4>
-                    <ul>
-                        <li><a href="#services">Social Media Management</a></li>
-                        <li><a href="#services">Performance Marketing</a></li>
-                        <li><a href="#services">Webdesign</a></li>
-                        <li><a href="#services">Branding</a></li>
-                        <li><a href="#services">Content Creation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Unternehmen</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Über Uns</a></li>
-                        <li><a href="#work">Projekte</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                        <li><a href="#impressum" id="impressumLink">Impressum</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Kontakt</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> management.smbl@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 SMBL. Alle Rechte vorbehalten. | <a href="#impressum" id="impressumLink2">Impressum</a> | <a href="#datenschutz">Datenschutz</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Impressum Modal -->
-    <div class="modal-overlay" id="impressumModal">
-        <div class="modal">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <h2>Impressum</h2>
-            <div class="impressum-content">
-                <h3>Angaben gemäß § 5 TMG</h3>
-                <p>
-                    <strong>Stadter & Mitisoulis s. c.</strong><br>
-                    Lubanska 50/10<br>
-                    59-900 Zgorzelec<br>
-                    Polen
-                </p>
-
-                <h3>Kontakt</h3>
-                <p>
-                    E-Mail: management.smbl@gmail.com
-                </p>
-
-                <h3>Steuernummer</h3>
-                <p>NIP: 6152080019</p>
-
-                <h3>Verantwortlich für den Inhalt</h3>
-                <p>
-                    Stadter & Mitisoulis s. c.<br>
-                    Lubanska 50/10<br>
-                    59-900 Zgorzelec, Polen
-                </p>
-
-                <h3>Haftungsausschluss</h3>
-                <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
-
-                <h3>Haftung für Links</h3>
-                <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
-
-                <h3>Urheberrecht</h3>
-                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors.</p>
-            </div>
-        </div>
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html">SMBL<span class="dot">.</span><span class="media">media</span></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="reels.html">Reels</a></li>
+          <li><a href="ads.html">Ads</a></li>
+          <li><a href="fahrschulen.html">Fahrschulen</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="about.html">Über uns</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--primary btn--sm" href="kontakt.html">Erstgespräch</a>
+      </div>
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <!-- ===== HERO ===== -->
+  <section class="hero hero--accent">
+    <div class="hero__inner">
+      <div>
+        <span class="tag">Performance · Reels · Berlin</span>
+        <h1 class="mt-3">Reels, die nicht nur viral gehen — sondern auch Kunden bringen.</h1>
+        <p class="lead">Reels-Skill + Performance-DNA in einem Team. Die meisten Reels-Agencies können kein Performance Marketing. Die meisten Performance-Marketer machen keine guten Reels. Wir machen beides.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary btn--lg" href="kontakt.html">Kostenloses Erstgespräch</a>
+          <a class="btn btn--secondary btn--lg" href="cases.html">Cases ansehen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STAT BAND ===== -->
+  <section class="section section--gray section--tight">
+    <div class="container">
+      <div class="grid grid--3">
+        <div class="stat fade-in">
+          <div class="stat__value">220 → 550</div>
+          <div class="stat__label">Follower in 24 Monaten · Aventi Autohaus</div>
+          <div class="stat__sub">12 Reels/Monat · vereinzelt 100k–Mio Views</div>
+        </div>
+        <div class="stat fade-in">
+          <div class="stat__value">5 € CPL</div>
+          <div class="stat__label">Cost per Lead · Eva Vogel Coaching</div>
+          <div class="stat__sub">32 Leads in 14 Tagen · 164 € Spend</div>
+        </div>
+        <div class="stat fade-in">
+          <div class="stat__value">13 Kunden</div>
+          <div class="stat__label">in wenigen Wochen · VIB Bamberg Fahrschule</div>
+          <div class="stat__sub">Dashcam-Reels + Ads · skalierbar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES TEASER ===== -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 720px;">
+        <span class="eyebrow">Was wir machen</span>
+        <h2>Drei Services. Eine Reichweiten-Logik.</h2>
+        <p class="lead mt-3">Kerngeschäft sind Reels. Performance Ads bauen wir oben drauf, wenn du Conversion willst. Web & Brand machen wir situativ.</p>
+      </div>
+
+      <div class="grid grid--3 mt-6">
+        <article class="card fade-in">
+          <div class="card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3>01 · Reels & Short-Form Video</h3>
+          <p class="mt-2 text-muted">Konzept, Skripte, Drehbegleitung, Schnitt, Distribution. Drei Pakete: Full Service, Schnitt-only, Content Recycling.</p>
+          <a class="btn btn--ghost mt-4" href="reels.html">Mehr zu Reels <span class="arrow">→</span></a>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg>
+          </div>
+          <h3>02 · Performance Ads</h3>
+          <p class="mt-2 text-muted">Meta-Ads-Funnels, Conversion-Tracking, Audience-Building. Add-On für Reels-Kunden oder eigenständig — Reichweite zu Conversion verbinden.</p>
+          <a class="btn btn--ghost mt-4" href="ads.html">Mehr zu Ads <span class="arrow">→</span></a>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>03 · Web & Brand</h3>
+          <p class="mt-2 text-muted">Situativ — wenn du eine komplette Online-Präsenz brauchst. Nicht aktiv beworben, aber Teil unseres Angebots.</p>
+          <a class="btn btn--ghost mt-4" href="kontakt.html">Anfrage stellen <span class="arrow">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASES TEASER ===== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div style="max-width: 720px;">
+        <span class="eyebrow">Beweis · Woran wir uns messen lassen</span>
+        <h2>Drei Kunden. Drei Zahlen. Keine Versprechen.</h2>
+      </div>
+      <div class="grid grid--3 mt-6">
+        <div class="case fade-in">
+          <div>
+            <div class="case__sector">Autohaus</div>
+            <div class="case__client">Aventi</div>
+          </div>
+          <div class="case__metric">220 → 550</div>
+          <div class="case__notes">
+            <ul>
+              <li>Follower in 24 Monaten konstant</li>
+              <li>12 Reels/Monat seit Beginn</li>
+              <li>Vereinzelt 100k bis Mio Views</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case fade-in">
+          <div>
+            <div class="case__sector">Coaching</div>
+            <div class="case__client">Eva Vogel</div>
+          </div>
+          <div class="case__metric">32 Leads</div>
+          <div class="case__notes">
+            <ul>
+              <li>164 € Spend in 14 Tagen</li>
+              <li>5 € Cost per Lead</li>
+              <li>5 hot Leads im Funnel</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case fade-in">
+          <div>
+            <div class="case__sector">Fahrschule</div>
+            <div class="case__client">VIB Bamberg</div>
+          </div>
+          <div class="case__metric">13 Kunden</div>
+          <div class="case__notes">
+            <ul>
+              <li>Durch Dashcam-Reels + Ads</li>
+              <li>In wenigen Wochen gewonnen</li>
+              <li>2026: Niche-Cornerstone</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <a class="btn btn--secondary" href="cases.html">Alle Cases im Detail →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROZESS ===== -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 720px;">
+        <span class="eyebrow">So arbeiten wir</span>
+        <h2>Reichweite ist kein Zufall. Wir arbeiten in 5 Schritten.</h2>
+      </div>
+      <div class="steps mt-6">
+        <div class="step fade-in">
+          <div class="step__num">01</div>
+          <div>
+            <h3>Erstgespräch & Onboarding</h3>
+            <p>30 Minuten. Wir hören zu, du hörst, ob wir passen. Keine Pitch-Show.</p>
+          </div>
+        </div>
+        <div class="step fade-in">
+          <div class="step__num">02</div>
+          <div>
+            <h3>Zielgruppen-Analyse</h3>
+            <p>Wer sind deine Kunden, was schauen die, wo sind die Hooks. Ohne Annahmen.</p>
+          </div>
+        </div>
+        <div class="step fade-in">
+          <div class="step__num">03</div>
+          <div>
+            <h3>Contentplan & Skripte</h3>
+            <p>12 Reels/Monat, jeden mit Hook und Ziel. Du sagst Ja zu jedem Skript.</p>
+          </div>
+        </div>
+        <div class="step fade-in">
+          <div class="step__num">04</div>
+          <div>
+            <h3>Rohmaterial aufnehmen</h3>
+            <p>Wir kommen zu dir oder du drehst nach Anleitung. Beides funktioniert.</p>
+          </div>
+        </div>
+        <div class="step fade-in">
+          <div class="step__num">05</div>
+          <div>
+            <h3>Cutten, Distribution, Reporting</h3>
+            <p>Fertige Reels zu deiner Freigabe. Distribution + monatliches Reporting mit Zahlen, nicht Buzzwords.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="section section--tight">
+    <div class="cta-band">
+      <h2>Lass uns 30 Minuten reden.</h2>
+      <p>Kein Sales-Pitch. Wir schauen zusammen, ob Reels für dich Sinn ergeben — und wenn ja, wie.</p>
+      <div class="cta-band__buttons">
+        <a class="btn btn--primary btn--lg" style="background: var(--smbl-white); color: var(--smbl-navy);" href="kontakt.html">Erstgespräch buchen</a>
+        <a class="btn btn--secondary btn--lg" href="cases.html">Erst Cases ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="nav__logo" style="color: var(--smbl-white);" href="index.html">SMBL<span class="dot" style="color: var(--smbl-white);">.</span><span class="media" style="color: var(--smbl-gray-300);">media</span></a>
+        <p>Reels-Skill + Performance-DNA in einem Team. Berlin · Remote. Wir bauen das digitale Symbol deiner Marke.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="reels.html">Reels</a></li>
+          <li><a href="ads.html">Performance Ads</a></li>
+          <li><a href="fahrschulen.html">Fahrschulen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Agentur</h5>
+        <ul>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li><a href="mailto:management.smbl@gmail.com">management.smbl@gmail.com</a></li>
+          <li><a href="kontakt.html">Erstgespräch buchen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 SMBL.media · Jan Linz · Paul Stadter · Jannis Brütting</span>
+      <span>Berlin · Remote</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
