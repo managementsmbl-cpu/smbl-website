@@ -70,11 +70,25 @@
 }
 
 /* ============================================================
-   FONT-IMPORTS (Satoshi via Fontshare, Inter via Google Fonts)
+   FONTS · SELBST GEHOSTET (DSGVO, kein CDN/@import!)
+   Lege die .woff2-Dateien in  assets/fonts/  ab (siehe README dort).
+   Solange die Dateien fehlen, greift sauber der System-Font-Fallback.
    ============================================================ */
 
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Satoshi";
+  src: url("assets/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+  font-style: normal;
+}
 
 /* ============================================================
    BASE STYLES
