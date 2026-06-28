@@ -43,6 +43,20 @@ document.querySelectorAll('form[data-form="lead"]').forEach(form => {
       if (v) lines.push(`${k}: ${v}`);
     }
     const body = encodeURIComponent(lines.join('\n'));
-    window.location.href = `mailto:management.smbl@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:management@smbl.media?subject=${subject}&body=${body}`;
   });
+});
+
+/* ===== Referenzen-Carousel: Pfeil-Navigation ===== */
+document.querySelectorAll('.refs').forEach(function (refs) {
+  var track = refs.querySelector('.refs__track');
+  if (!track) return;
+  var prev = refs.querySelector('.refs__nav--prev');
+  var next = refs.querySelector('.refs__nav--next');
+  function step() {
+    var card = track.querySelector('.ref-card');
+    return (card ? card.offsetWidth + 24 : 260) * 1.2;
+  }
+  if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
 });
