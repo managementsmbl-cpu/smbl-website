@@ -183,7 +183,7 @@
             <img src="assets/Moji Logo.jpg" alt="mojiclips, YouTube-Kanal" />
             <div class="ref-card__overlay"><div class="ref-card__facts">
               <div class="ref-card__title">mojiclips · YouTube</div>
-              <div class="ref-card__stat">YouTube-Schnitt seit 5 Jahren, [ABOZAHL] Abonnenten. Eine Referenz von uns.</div>
+              <div class="ref-card__stat">YouTube-Schnitt seit 5 Jahren, 147.000 Abonnenten. Eine Referenz von uns.</div>
             </div></div>
           </a>
 
@@ -225,8 +225,42 @@
           <span class="eyebrow">Kontakt</span>
           <h2>Lass uns 30 Minuten reden.</h2>
           <p class="lead mt-3">Kein Sales-Pitch. Wir schauen zusammen, ob es passt.</p>
-          <p class="mt-4" style="color: var(--smbl-gray-300);">Lieber direkt schreiben?<br />
-            <a href="mailto:[DOMAIN-MAIL]" style="color: var(--smbl-white); text-decoration: underline;">[DOMAIN-MAIL]</a>
+          <p class="mt-3" style="color: var(--smbl-gray-300);">Buch dir rechts direkt einen Termin, oder schreib uns kurz:</p>
+
+          <!-- Jan: Spaeter auf Formspree umstellen, damit Anfragen zuverlaessig gespeichert werden, auch ohne Mail-Programm beim Besucher. -->
+          <form class="form mt-4" data-form="lead" data-subject="Anfrage über smblmedia.de">
+            <div class="form__row">
+              <div class="form__field">
+                <label for="k-name">Name</label>
+                <input id="k-name" name="name" type="text" required />
+              </div>
+              <div class="form__field">
+                <label for="k-email">E-Mail</label>
+                <input id="k-email" name="email" type="email" required />
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="k-stadt">Stadt</label>
+              <input id="k-stadt" name="stadt" type="text" />
+            </div>
+            <div class="form__field">
+              <label for="k-msg">Nachricht</label>
+              <textarea id="k-msg" name="nachricht" placeholder="Worum geht es?"></textarea>
+            </div>
+            <div class="hp-field" aria-hidden="true">
+              <label for="k-website">Bitte leer lassen</label>
+              <input id="k-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <label class="form__consent">
+              <input type="checkbox" name="consent" required />
+              <span>Ich habe die <a href="datenschutz.html" style="text-decoration: underline; color: inherit;">Datenschutzerklärung</a> gelesen und bin einverstanden.</span>
+            </label>
+            <button class="btn btn--lg" type="submit" style="background: var(--smbl-white); color: var(--smbl-navy);">Nachricht senden</button>
+            <p style="font-size:12px; color: var(--smbl-gray-500);">Beim Senden öffnet sich dein E-Mail-Programm mit der vorausgefüllten Nachricht.</p>
+          </form>
+
+          <p class="mt-3" style="color: var(--smbl-gray-300);">Lieber direkt schreiben?<br />
+            <a href="mailto:info@smblmedia.de" style="color: var(--smbl-white); text-decoration: underline;">info@smblmedia.de</a>
           </p>
         </div>
         <div class="calendly-wrap">
@@ -262,7 +296,7 @@
       <div>
         <h5>Kontakt</h5>
         <ul>
-          <li><a href="mailto:[DOMAIN-MAIL]">[DOMAIN-MAIL]</a></li>
+          <li><a href="mailto:info@smblmedia.de">info@smblmedia.de</a></li>
           <li><a href="#kontakt">Erstgespräch buchen</a></li>
         </ul>
       </div>

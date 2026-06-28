@@ -889,3 +889,5 @@ h4 { font-size: var(--text-display-sm); }
 }
 .kontakt-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr 1fr; align-items: start; }
 @media (max-width: 880px) { .kontakt-grid { grid-template-columns: 1fr; } }
+.section--dark .form label { color: var(--smbl-gray-300); }
+.section--dark .form__consent { color: var(--smbl-gray-300); }
