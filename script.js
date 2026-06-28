@@ -54,8 +54,8 @@ document.querySelectorAll('form[data-form="lead"]').forEach(function (form) {
     var hp = form.querySelector('[name="website"]');
     if (hp && hp.value) return;
 
-    var to = 'info@smblmedia.de';
-    var subject = form.getAttribute('data-subject') || 'Anfrage über smblmedia.de';
+    var to = 'info@smblmedia.com';
+    var subject = form.getAttribute('data-subject') || 'Anfrage über smblmedia.com';
     var lines = [];
     Array.prototype.forEach.call(form.elements, function (el) {
       if (!el.name || el.name === 'website' || el.name === 'consent') return;
@@ -64,7 +64,7 @@ document.querySelectorAll('form[data-form="lead"]').forEach(function (form) {
       var val = (el.value || '').trim();
       if (val) lines.push(label + ': ' + val);
     });
-    var body = lines.join('\n') + '\n\n(Gesendet über smblmedia.de)';
+    var body = lines.join('\n') + '\n\n(Gesendet über smblmedia.com)';
     window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 });
