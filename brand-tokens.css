@@ -70,7 +70,7 @@
 }
 
 /* ============================================================
-   FONTS · SELBST GEHOSTET (DSGVO — kein CDN/@import!)
+   FONTS · SELBST GEHOSTET (DSGVO, kein CDN/@import!)
    Lege die .woff2-Dateien in  assets/fonts/  ab (siehe README dort).
    Solange die Dateien fehlen, greift sauber der System-Font-Fallback.
    ============================================================ */

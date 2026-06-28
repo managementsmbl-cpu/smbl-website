@@ -851,3 +851,41 @@ h4 { font-size: var(--text-display-sm); }
   .ref-card__facts { opacity: 1; transform: none; }
   .ref-card__overlay { background: linear-gradient(180deg, rgba(10,10,10,0) 40%, rgba(10,10,10,.85) 100%); }
 }
+@media (prefers-reduced-motion: reduce) {
+  .ref-card__facts { opacity: 1; transform: none; }
+  .ref-card img, .ref-card__overlay { transition: none; }
+  html { scroll-behavior: auto; }
+  .refs__track { scroll-behavior: auto; }
+}
+
+/* ===== MOBILE STICKY CTA-LEISTE ===== */
+.mobile-cta { display: none; }
+@media (max-width: 880px) {
+  .mobile-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    background: var(--smbl-navy);
+    color: var(--smbl-white);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: var(--text-body);
+    padding: 15px 16px;
+    text-decoration: none;
+    box-shadow: 0 -4px 20px -6px rgba(15, 23, 42, 0.45);
+  }
+  body { padding-bottom: 58px; }
+}
+
+/* ===== CALENDLY ===== */
+.calendly-wrap {
+  background: var(--smbl-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.kontakt-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr 1fr; align-items: start; }
+@media (max-width: 880px) { .kontakt-grid { grid-template-columns: 1fr; } }

@@ -12,20 +12,18 @@
 </head>
 <body>
 
+  <!-- ===== NAV ===== -->
   <header class="nav">
     <div class="nav__inner">
       <a class="nav__logo" href="index.html">SMBL<span class="dot">.</span><span class="media">media</span></a>
       <nav>
         <ul class="nav__links">
-          <li><a href="reels.html">Reels</a></li>
-          <li><a href="ads.html">Ads</a></li>
           <li><a href="fahrschulen.html">Fahrschulen</a></li>
-          <li><a href="cases.html">Cases</a></li>
-          <li><a href="about.html">Über uns</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
         </ul>
       </nav>
       <div class="nav__cta">
-        <a class="btn btn--primary btn--sm" href="kontakt.html">Erstgespräch</a>
+        <a class="btn btn--primary btn--sm" href="index.html#kontakt">Erstgespräch</a>
       </div>
       <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -37,50 +35,46 @@
     <div class="container-narrow">
       <span class="eyebrow">Rechtliches</span>
       <h1>Datenschutzerklärung</h1>
-      <p class="lead mt-3">Entwurf — der Finaltext wird vor dem Launch juristisch geprüft. Platzhalter sind klar markiert.</p>
+      <p class="lead mt-3">Entwurf. Den Finaltext prüft Jan vor dem Launch über e-recht24 oder einen vergleichbaren Generator. Platzhalter sind mit [zu pruefen] markiert.</p>
 
       <div class="card mt-6">
         <h3>1. Verantwortlicher</h3>
-        <p class="mt-2 text-muted">Verantwortlich für die Datenverarbeitung auf dieser Website ist der im <a href="impressum.html" style="text-decoration: underline;">Impressum</a> genannte Anbieter. E-Mail: management@smbl.media.</p>
+        <p class="mt-2 text-muted">Verantwortlich ist die im <a href="impressum.html" style="text-decoration: underline;">Impressum</a> genannte Person. E-Mail: [DOMAIN-MAIL].</p>
 
         <h3 class="mt-6">2. Hosting &amp; Server-Logs</h3>
-        <p class="mt-2 text-muted">Beim Aufruf der Website werden durch den Hosting-Anbieter automatisch Server-Logfiles verarbeitet (IP-Adresse, Datum/Uhrzeit, abgerufene Datei, Browser-Typ). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb). <!-- [DATENSCHUTZ-DIENSTE: Hosting-Anbieter benennen, z. B. Netlify/GitHub Pages/Vercel + Auftragsverarbeitungsvertrag] --> [Hosting-Anbieter eintragen]</p>
+        <p class="mt-2 text-muted">Beim Aufruf der Website verarbeitet der Hosting-Anbieter automatisch Server-Logfiles (IP-Adresse, Datum, Uhrzeit, abgerufene Datei, Browsertyp). Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (sicherer Betrieb). [zu pruefen: Hosting-Anbieter benennen, Auftragsverarbeitungsvertrag]</p>
 
-        <h3 class="mt-6">3. Kontakt- &amp; Anfrageformular</h3>
-        <p class="mt-2 text-muted">Wenn du uns über ein Formular oder per E-Mail kontaktierst, verarbeiten wir die angegebenen Daten (Name, E-Mail, Fahrschul-/Firmenname, Stadt, deine Nachricht) ausschließlich zur Bearbeitung deiner Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. lit. f. Die Daten werden gelöscht, sobald sie nicht mehr erforderlich sind. <!-- [DATENSCHUTZ-DIENSTE: Formular-Dienstleister benennen, falls z. B. Formspree genutzt wird] --></p>
+        <h3 class="mt-6">3. Kontakt &amp; Anfrageformular (Formspree)</h3>
+        <p class="mt-2 text-muted">Anfragen über das Formular werden über den Dienst Formspree verarbeitet und an uns weitergeleitet. Übermittelt werden die von dir angegebenen Daten (z. B. Name, E-Mail, Fahrschul- oder Firmenname, Stadt, Nachricht), ausschließlich zur Bearbeitung deiner Anfrage. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und lit. f DSGVO. [zu pruefen: Formspree-Datenverarbeitung, Serverstandort, AV-Vertrag]</p>
 
-        <h3 class="mt-6">4. Schriftarten</h3>
-        <p class="mt-2 text-muted">Schriftarten werden lokal vom eigenen Server geladen (selbst gehostet). Es findet keine Übertragung an Google Fonts oder Fontshare statt.</p>
+        <h3 class="mt-6">4. Terminbuchung (Calendly)</h3>
+        <p class="mt-2 text-muted">Für die Buchung eines Erstgesprächs binden wir das Tool Calendly ein. Beim Öffnen des Buchungs-Widgets werden Daten an Calendly übertragen (z. B. IP-Adresse, Name, E-Mail, gewählter Termin). Rechtsgrundlage: Art. 6 Abs. 1 lit. b und lit. f DSGVO. [zu pruefen: Calendly-Einbindung, ggf. Einwilligungslösung, Serverstandort USA]</p>
 
-        <h3 class="mt-6">5. Cookies &amp; Tracking</h3>
-        <p class="mt-2 text-muted">Diese Website setzt keine Tracking-Cookies und kein Analyse-Tracking ein, daher ist kein Cookie-Banner erforderlich. <!-- [Falls später Analytics gewünscht: datenschutzfreundliche Lösung wie Plausible ergänzen und hier beschreiben] --></p>
+        <h3 class="mt-6">5. Schriftarten (selbst gehostet)</h3>
+        <p class="mt-2 text-muted">Schriftarten werden lokal vom eigenen Server geladen. Es findet keine Übertragung an Google Fonts oder Fontshare statt.</p>
 
-        <h3 class="mt-6">6. Deine Rechte</h3>
-        <p class="mt-2 text-muted">Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO) sowie ein Beschwerderecht bei einer Aufsichtsbehörde. Wende dich dafür an management@smbl.media.</p>
+        <h3 class="mt-6">6. Cookies &amp; Tracking</h3>
+        <p class="mt-2 text-muted">Eigene Tracking-Cookies oder Analyse-Tools setzen wir nicht ein. [zu pruefen: ob Calendly/Formspree Cookies setzen und ob daraus eine Einwilligungspflicht entsteht]</p>
+
+        <h3 class="mt-6">7. Deine Rechte</h3>
+        <p class="mt-2 text-muted">Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO) sowie ein Beschwerderecht bei einer Aufsichtsbehörde. Kontakt: [DOMAIN-MAIL].</p>
       </div>
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
         <a class="nav__logo" style="color: var(--smbl-white);" href="index.html">SMBL<span class="dot" style="color: var(--smbl-white);">.</span><span class="media" style="color: var(--smbl-gray-300);">media</span></a>
-        <p>Reels mit Reichweite, Ads mit Conversion — aus einem Team. Remote, deutschlandweit.</p>
+        <p>Reels mit Reichweite, Ads mit Conversion, aus einem Team. Remote, deutschlandweit.</p>
       </div>
       <div>
-        <h5>Services</h5>
+        <h5>Seiten</h5>
         <ul>
-          <li><a href="reels.html">Reels</a></li>
-          <li><a href="ads.html">Performance Ads</a></li>
           <li><a href="fahrschulen.html">Fahrschulen</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Agentur</h5>
-        <ul>
-          <li><a href="about.html">Über uns</a></li>
-          <li><a href="cases.html">Cases</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="index.html#referenzen">Referenzen</a></li>
         </ul>
       </div>
       <div>
@@ -90,12 +84,21 @@
           <li><a href="datenschutz.html">Datenschutz</a></li>
         </ul>
       </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li><a href="mailto:[DOMAIN-MAIL]">[DOMAIN-MAIL]</a></li>
+          <li><a href="index.html#kontakt">Erstgespräch buchen</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 SMBL.media · Jan Linz · Paul Stadter · Jannis Brütting</span>
+      <span>© 2026 SMBL.media · Jan-Herbert Linz · Paul Stadter · Jannis Brütting</span>
       <span>Remote · Deutschlandweit</span>
     </div>
   </footer>
+
+  <a class="mobile-cta" href="index.html#kontakt">Kostenloses Erstgespräch</a>
 
   <script src="script.js"></script>
 </body>
