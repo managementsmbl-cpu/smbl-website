@@ -6,3 +6,6 @@ Thumbs.db
 assets/*.mp4
 assets/*.HEIC
 assets/team-group-*.jpg
+
+# Quelle fuer das Link-Vorschaubild (nicht veroeffentlichen)
+_og/
