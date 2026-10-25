@@ -891,3 +891,26 @@ h4 { font-size: var(--text-display-sm); }
 @media (max-width: 880px) { .kontakt-grid { grid-template-columns: 1fr; } }
 .section--dark .form label { color: var(--smbl-gray-300); }
 .section--dark .form__consent { color: var(--smbl-gray-300); }
+
+/* ===== CALENDLY: Click-to-load ===== */
+.calendly-consent__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 360px;
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  color: var(--smbl-gray-700);
+}
+.calendly-consent__box h3 { font-size: var(--text-display-sm); color: var(--smbl-black); }
+.calendly-consent__box p { max-width: 420px; font-size: var(--text-body-sm); }
+.calendly-consent__box a { text-decoration: underline; color: inherit; }
+.calendly-consent__alt { font-size: var(--text-body-sm); color: var(--smbl-gray-500) !important; }
+.calendly-consent--light { border: 1px solid var(--smbl-gray-200); }
+
+/* Case-Kennzahlen: auf schmalen Handys nicht über den Rand laufen */
+@media (max-width: 480px) {
+  .case__metric { font-size: 36px; overflow-wrap: anywhere; }
+}

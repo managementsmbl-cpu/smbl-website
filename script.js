@@ -68,3 +68,36 @@ document.querySelectorAll('form[data-form="lead"]').forEach(function (form) {
     window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 });
+
+/* ===== Calendly: erst nach Klick laden (keine Datenübertragung vorher) ===== */
+(function () {
+  var SRC = 'https://assets.calendly.com/assets/external/widget.js';
+  function loadScript(cb) {
+    if (window.Calendly) return cb();
+    var existing = document.querySelector('script[src="' + SRC + '"]');
+    if (existing) return existing.addEventListener('load', cb);
+    var s = document.createElement('script');
+    s.src = SRC;
+    s.async = true;
+    s.onload = cb;
+    document.head.appendChild(s);
+  }
+  document.querySelectorAll('[data-calendly-load]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var wrap = btn.closest('.calendly-consent');
+      var url = wrap.getAttribute('data-calendly-url');
+      btn.disabled = true;
+      btn.textContent = 'Lädt …';
+      loadScript(function () {
+        var box = wrap.querySelector('.calendly-consent__box');
+        var widget = document.createElement('div');
+        widget.style.minWidth = '280px';
+        widget.style.height = '640px';
+        wrap.appendChild(widget);
+        if (box) box.remove();
+        wrap.classList.add('is-loaded');
+        window.Calendly.initInlineWidget({ url: url, parentElement: widget });
+      });
+    });
+  });
+})();
