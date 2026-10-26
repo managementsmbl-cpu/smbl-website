@@ -914,3 +914,6 @@ h4 { font-size: var(--text-display-sm); }
 @media (max-width: 480px) {
   .case__metric { font-size: 36px; overflow-wrap: anywhere; }
 }
+
+/* Breite Karte über die volle Grid-Breite (z. B. Recruiting) */
+.card--wide { grid-column: 1 / -1; }
